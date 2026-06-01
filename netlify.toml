@@ -1,0 +1,17 @@
+# Netlify config — static site, no build step needed.
+# The whole repo root is published as-is.
+
+[build]
+  publish = "."
+  command = ""
+
+# Long-cache the static assets, but always re-check HTML so updates show.
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*.jsx"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Accessibility — Molar Bear Pediatric Dental</title>
+<meta name="description" content="How Molar Bear works to make our offices and website accessible to every family." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="favicon.svg" />
+<meta name="theme-color" content="#FFF6E8" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Molar Bear Pediatric Dental" />
+<meta property="og:title" content="Accessibility — Molar Bear Pediatric Dental" />
+<meta property="og:description" content="How Molar Bear works to make our offices and website accessible to every family." />
+<meta property="og:image" content="https://molarbear-demo.netlify.app/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Accessibility — Molar Bear Pediatric Dental" />
+<meta name="twitter:description" content="How Molar Bear works to make our offices and website accessible to every family." />
+<meta name="twitter:image" content="https://molarbear-demo.netlify.app/og-image.png" />
+<link rel="stylesheet" href="brand.css" />
+</head>
+<body>
+<div id="root"><div class="boot" aria-hidden="true"><div class="boot-bear"><svg width="84" height="84" viewBox="0 0 220 220"><circle cx="55" cy="55" r="28" fill="#A0522D"/><circle cx="165" cy="55" r="28" fill="#A0522D"/><circle cx="55" cy="55" r="14" fill="#F4845F"/><circle cx="165" cy="55" r="14" fill="#F4845F"/><circle cx="110" cy="115" r="75" fill="#A0522D"/><ellipse cx="110" cy="140" rx="40" ry="32" fill="#F4D8B8"/><circle cx="85" cy="105" r="7" fill="#2A1810"/><circle cx="135" cy="105" r="7" fill="#2A1810"/><ellipse cx="110" cy="130" rx="8" ry="6" fill="#2A1810"/><path d="M 90 150 Q 110 168 130 150" stroke="#2A1810" stroke-width="3" fill="none" stroke-linecap="round"/></svg></div><div class="boot-text">Loading…</div></div></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="site-chrome.jsx"></script>
+<script type="text/babel" src="legal-pages.jsx"></script>
+
+<script type="text/babel">
+  function Page() {
+    const onBook = () => { window.location.href = "Contact.html"; };
+    const sections = [
+      {
+        h: "Our commitment",
+        body: [
+          "We want every family to be able to find us, schedule with us, and visit us. We design with WCAG 2.1 Level AA as our minimum target and review every release against it.",
+        ],
+      },
+      {
+        h: "Website accessibility",
+        body: [
+          "Specific things we do:",
+          [
+            "All images that carry information have descriptive alt text.",
+            "Color contrast on text is checked against WCAG AA (4.5:1 for body, 3:1 for large headings).",
+            "Every interactive control is keyboard reachable and has a visible focus state.",
+            "Forms have programmatic labels and clear error messages.",
+            "Layouts scale and reflow down to 320 px without horizontal scrolling.",
+            "We test with VoiceOver, NVDA, and keyboard-only navigation before each release.",
+          ],
+        ],
+      },
+      {
+        h: "Office accessibility",
+        body: [
+          "Every Molar Bear location has:",
+          [
+            "Step-free entrance and accessible parking close to the door.",
+            "ADA-compliant restrooms.",
+            "A sensory room with low light, weighted blankets, and noise-canceling headphones available on request.",
+            "Bilingual front-desk staff (English / Spanish) at every location.",
+            "Sign-language interpreter available with 48-hour notice \u2014 no charge.",
+          ],
+        ],
+      },
+      {
+        h: "Tell us what\u2019s broken",
+        body: [
+          "If you run into an accessibility barrier \u2014 on this site or in our offices \u2014 we want to hear about it and fix it. Email accessibility@molarbear.dental or call (555) 123-CHEW. We respond within 2 business days.",
+        ],
+      },
+    ];
+    const contact = (
+      <>
+        <a href="mailto:accessibility@molarbear.dental" style={{ color: "#A0522D", fontWeight: 700 }}>accessibility@molarbear.dental</a> \u00B7 <a href="tel:5551234386" style={{ color: "#A0522D", fontWeight: 700 }}>(555) 123-CHEW</a>
+      </>
+    );
+    return (
+      <>
+        <SiteHeader onBookClick={onBook} currentPage="" />
+        <main>
+          <LegalPage
+            eyebrow="Accessibility"
+            title="A clinic any family can reach."
+            lastUpdated="January 14, 2026"
+            intro="We work to meet WCAG 2.1 AA on this site and to keep every office step-free and sensory-friendly. If anything falls short, tell us."
+            sections={sections}
+            contactBlock={contact}
+          />
+        </main>
+        <SiteFooter onBookClick={onBook} />
+      </>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById("root")).render(<Page />);
+</script>
+</body>
+</html>

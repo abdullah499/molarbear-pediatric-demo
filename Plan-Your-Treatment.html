@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Plan Your Treatment — Molar Bear Pediatric Dental</title>
+<meta name="description" content="A 4-question Treatment Finder + a Custom Cost Calculator. Plan your kid's visit before you book." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="favicon.svg" />
+<meta name="theme-color" content="#FFF6E8" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Molar Bear Pediatric Dental" />
+<meta property="og:title" content="Plan Your Treatment — Molar Bear Pediatric Dental" />
+<meta property="og:description" content="A 4-question Treatment Finder + a Custom Cost Calculator. Plan your kid's visit before you book." />
+<meta property="og:image" content="https://molarbear-demo.netlify.app/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Plan Your Treatment — Molar Bear Pediatric Dental" />
+<meta name="twitter:description" content="A 4-question Treatment Finder + a Custom Cost Calculator. Plan your kid's visit before you book." />
+<meta name="twitter:image" content="https://molarbear-demo.netlify.app/og-image.png" />
+<link rel="stylesheet" href="brand.css" />
+</head>
+<body>
+<div id="root"><div class="boot" aria-hidden="true"><div class="boot-bear"><svg width="84" height="84" viewBox="0 0 220 220"><circle cx="55" cy="55" r="28" fill="#A0522D"/><circle cx="165" cy="55" r="28" fill="#A0522D"/><circle cx="55" cy="55" r="14" fill="#F4845F"/><circle cx="165" cy="55" r="14" fill="#F4845F"/><circle cx="110" cy="115" r="75" fill="#A0522D"/><ellipse cx="110" cy="140" rx="40" ry="32" fill="#F4D8B8"/><circle cx="85" cy="105" r="7" fill="#2A1810"/><circle cx="135" cy="105" r="7" fill="#2A1810"/><ellipse cx="110" cy="130" rx="8" ry="6" fill="#2A1810"/><path d="M 90 150 Q 110 168 130 150" stroke="#2A1810" stroke-width="3" fill="none" stroke-linecap="round"/></svg></div><div class="boot-text">Loading…</div></div></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+
+<script src="image-slot.js"></script>
+<script src="stock-images.js"></script>
+
+<script type="text/babel" src="site-chrome.jsx"></script>
+<script type="text/babel" src="plan-your-treatment.jsx"></script>
+
+<script type="text/babel">
+  function Page() {
+    const onBook = () => { window.location.href = "Contact.html"; };
+    return (
+      <>
+        <SiteHeader onBookClick={onBook} currentPage="plan" />
+        <main>
+          <PlanYourTreatmentPage onBookClick={onBook} />
+        </main>
+        <SiteFooter onBookClick={onBook} />
+      </>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById("root")).render(<Page />);
+</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Terms of Use — Molar Bear Pediatric Dental</title>
+<meta name="description" content="Rules of the road for using molarbear.dental." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="favicon.svg" />
+<meta name="theme-color" content="#FFF6E8" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Molar Bear Pediatric Dental" />
+<meta property="og:title" content="Terms of Use — Molar Bear Pediatric Dental" />
+<meta property="og:description" content="Rules of the road for using molarbear.dental." />
+<meta property="og:image" content="https://molarbear-demo.netlify.app/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Terms of Use — Molar Bear Pediatric Dental" />
+<meta name="twitter:description" content="Rules of the road for using molarbear.dental." />
+<meta name="twitter:image" content="https://molarbear-demo.netlify.app/og-image.png" />
+<link rel="stylesheet" href="brand.css" />
+</head>
+<body>
+<div id="root"><div class="boot" aria-hidden="true"><div class="boot-bear"><svg width="84" height="84" viewBox="0 0 220 220"><circle cx="55" cy="55" r="28" fill="#A0522D"/><circle cx="165" cy="55" r="28" fill="#A0522D"/><circle cx="55" cy="55" r="14" fill="#F4845F"/><circle cx="165" cy="55" r="14" fill="#F4845F"/><circle cx="110" cy="115" r="75" fill="#A0522D"/><ellipse cx="110" cy="140" rx="40" ry="32" fill="#F4D8B8"/><circle cx="85" cy="105" r="7" fill="#2A1810"/><circle cx="135" cy="105" r="7" fill="#2A1810"/><ellipse cx="110" cy="130" rx="8" ry="6" fill="#2A1810"/><path d="M 90 150 Q 110 168 130 150" stroke="#2A1810" stroke-width="3" fill="none" stroke-linecap="round"/></svg></div><div class="boot-text">Loading…</div></div></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="site-chrome.jsx"></script>
+<script type="text/babel" src="legal-pages.jsx"></script>
+
+<script type="text/babel">
+  function Page() {
+    const onBook = () => { window.location.href = "Contact.html"; };
+    const sections = [
+      {
+        h: "Acceptance",
+        body: [
+          "By using molarbear.dental you agree to these terms. If you don\u2019t agree, please don\u2019t use the site.",
+        ],
+      },
+      {
+        h: "Not medical advice",
+        body: [
+          "The content on this site is educational. It is not a substitute for a clinical exam or professional dental advice. Always talk to a licensed dentist about your child\u2019s specific situation.",
+          "Dental emergencies need real-time care. If your child has a knocked-out permanent tooth, uncontrolled bleeding, swelling that affects breathing or swallowing, or any other emergency, call us at (555) 123-CHEW or go to the nearest emergency room.",
+        ],
+      },
+      {
+        h: "Online booking",
+        body: [
+          "Requesting an appointment through this site is a request, not a confirmation. Your appointment is only confirmed after we contact you (usually within one business hour). We may decline or reschedule requests at our discretion.",
+        ],
+      },
+      {
+        h: "Acceptable use",
+        body: [
+          "You agree not to:",
+          [
+            "Try to access systems or data you are not authorized to access.",
+            "Use automated tools to scrape, copy, or overload the site.",
+            "Submit false or misleading information.",
+            "Use the site to harass, threaten, or harm any person.",
+          ],
+        ],
+      },
+      {
+        h: "Intellectual property",
+        body: [
+          "All content on this site (logos, photographs, illustrations, written copy, and the Molar Bear name) is owned by Molar Bear Pediatric Dental, P.C. or licensed to us. Don\u2019t reuse it without written permission.",
+        ],
+      },
+      {
+        h: "Third-party links",
+        body: [
+          "We link to outside sites we think are useful (insurance carriers, the American Academy of Pediatric Dentistry, etc.). We don\u2019t control those sites and aren\u2019t responsible for their content.",
+        ],
+      },
+      {
+        h: "Disclaimers and liability",
+        body: [
+          "The site is provided \u201Cas is.\u201D To the fullest extent allowed by law, Molar Bear is not liable for indirect, incidental, or consequential damages arising from your use of the site.",
+        ],
+      },
+      {
+        h: "Changes to these terms",
+        body: [
+          "We may update these terms from time to time. The new effective date will appear at the top of this page. Continued use of the site after we update means you accept the new terms.",
+        ],
+      },
+      {
+        h: "Governing law",
+        body: [
+          "These terms are governed by the laws of the State of Illinois, without regard to its conflict-of-laws rules.",
+        ],
+      },
+    ];
+    const contact = (
+      <>
+        Molar Bear Pediatric Dental, P.C. \u00B7 148 Maple Row, Suite 200 \u00B7 Riverside, IL 60546<br/>
+        <a href="mailto:hello@molarbear.dental" style={{ color: "#A0522D", fontWeight: 700 }}>hello@molarbear.dental</a> \u00B7 <a href="tel:5551234386" style={{ color: "#A0522D", fontWeight: 700 }}>(555) 123-CHEW</a>
+      </>
+    );
+    return (
+      <>
+        <SiteHeader onBookClick={onBook} currentPage="" />
+        <main>
+          <LegalPage
+            eyebrow="Terms of Use"
+            title="The fine print, in plain English."
+            lastUpdated="January 14, 2026"
+            intro="Short version: this site is for information and booking requests. It isn\u2019t medical advice. For anything urgent, call us."
+            sections={sections}
+            contactBlock={contact}
+          />
+        </main>
+        <SiteFooter onBookClick={onBook} />
+      </>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById("root")).render(<Page />);
+</script>
+</body>
+</html>
